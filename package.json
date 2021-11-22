@@ -1,0 +1,19 @@
+{
+  "name": "obniz-app-sdk_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "obniz Inc.",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "obniz": "^3.17.0",
+    "obniz-app-sdk": "^1.2.0"
+  }
+}
