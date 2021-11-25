@@ -20,7 +20,7 @@ class MyWorker extends Worker<Obniz> {
     obniz.ble!.scan.onfind = async (p) => {
       if (LOGTTA_CO2.isAdvDevice(p)) {
         let data = LOGTTA_CO2.getData(p);
-        console.log(data);
+        console.log(obniz.id, data);
 
         await sleep(5000);
       }
