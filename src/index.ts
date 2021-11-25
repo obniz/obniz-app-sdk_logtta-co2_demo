@@ -38,7 +38,9 @@ class MyWorker extends Worker<Obniz> {
 const app = new App({
   appToken: process.env.APP_TOKEN!,
   workerClass: MyWorker,
-  instanceType: AppInstanceType.Master,
+  instanceType: process.env.INSTANCE_TYPE === 'master' ? AppInstanceType.Master : AppInstanceType.Slave,
+  database: "redis",
+  databaseConfig: process.env.REDIS_URL ?? "redis://localhost:6379",
   obnizClass: Obniz,
 });
 
